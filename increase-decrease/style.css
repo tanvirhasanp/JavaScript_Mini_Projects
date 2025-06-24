@@ -1,0 +1,30 @@
+*{
+ margin:0% ;
+ padding:0% ;
+ box-sizing: border-box;
+}
+html,body{
+ height: 100%;
+ width: 100%;
+}
+
+.container{
+    width: 500px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 100px;
+}
+#counting{
+    font-size: 30px;
+    padding: 20px;
+}
+button{
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+
+}
+button:disabled{
+    cursor: not-allowed;
+   opacity: 0.5;
+}
