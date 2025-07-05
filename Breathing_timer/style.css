@@ -1,0 +1,39 @@
+*{
+ margin:0% ;
+ padding:0% ;
+ box-sizing: border-box;
+}
+html,body{
+ height: 100vh;
+ width: 100%;
+ display: flex;
+ justify-content: center;
+ text-align: center;
+ align-items: center;
+}
+
+
+button{
+    margin: 7px;
+    padding: 10px 20px;
+    cursor: pointer; 
+    border: none;
+    color: white;
+    border-radius: 2px;
+}
+
+#start{
+    background-color: blue;  
+}
+#start:hover{
+    background-color: rgb(12, 12, 172);
+     transition: 0.3s;
+}
+
+#stop{
+    background-color: red;
+}
+#stop:hover{
+    background-color: rgb(219, 6, 6);
+    transition: 0.3s;
+}

@@ -1,0 +1,84 @@
+*{
+ margin:0% ;
+ padding:0% ;
+ box-sizing: border-box;
+}
+html,body{
+ height: 100%;
+ width: 100%;
+  margin: 20px 0 0 20px; 
+}
+
+#main{
+   margin: 0 auto;
+   /* border: 2px solid chocolate; */
+   border-radius: 10px; 
+}
+
+#h1{
+    padding: 20px;
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+}
+#p{
+    text-align: center;
+    font-size: 16px;
+    color: #7b7777;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+#form{
+    width: 50%;
+    padding: 20px;
+    border-radius: 10px;
+}
+#form label{
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+#form input{
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#btn{
+    background-color: chocolate;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+#btn:hover{
+    background-color: rgb(160, 67, 0);
+    transition: 0.5s;
+}
+
+#main{
+   background-color: aquamarine;
+   width: 60%;
+}
+
+#result{
+    padding: 20px;
+    background-color: rgb(214, 127, 246);
+    display: none
+}
+#score{
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+#h2{
+    margin-bottom: 10px;
+}
+#info{
+    padding: 20px;
+    background-color: burlywood;
+    border-radius: 0 0 10px 10px;
+}
