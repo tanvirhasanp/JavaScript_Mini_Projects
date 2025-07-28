@@ -1,0 +1,209 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #74b9ff 0%, #0984e3 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.weather-container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 450px;
+    width: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.weather-title {
+    color: #2d3436;
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 30px;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.input-container {
+    position: relative;
+    margin-bottom: 25px;
+}
+
+.weather-input {
+    width: 100%;
+    padding: 15px 20px;
+    border: 2px solid #e1e8ed;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    outline: none;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.9);
+}
+
+.weather-input:focus {
+    border-color: #0984e3;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(9, 132, 227, 0.2);
+}
+
+.weather-input::placeholder {
+    color: #636e72;
+    font-style: italic;
+}
+
+.weather-btn {
+    background: linear-gradient(135deg, #00b894 0%, #00a085 100%);
+    color: white;
+    border: none;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(0, 184, 148, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.weather-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(0, 184, 148, 0.4);
+    background: linear-gradient(135deg, #00a085 0%, #00b894 100%);
+}
+
+.weather-btn:active {
+    transform: translateY(-1px);
+}
+
+.weather-details {
+    margin-top: 30px;
+    padding: 25px;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    border-radius: 15px;
+    border-left: 5px solid #0984e3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.weather-details:empty {
+    display: none;
+}
+
+.weather-info {
+    font-size: 1.1rem;
+    line-height: 2;
+    color: #2d3436;
+    text-align: left;
+}
+
+.weather-info strong {
+    color: #0984e3;
+    font-weight: 600;
+}
+
+.weather-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    animation: bounce 2s infinite;
+}
+
+.error-message {
+    color: #e17055;
+    background: rgba(225, 112, 85, 0.1);
+    border: 1px solid rgba(225, 112, 85, 0.3);
+    border-radius: 10px;
+    padding: 15px;
+    margin-top: 20px;
+    font-weight: 500;
+}
+
+.loading {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #0984e3;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-right: 10px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+        transform: translateY(0);
+    }
+    40% {
+        transform: translateY(-10px);
+    }
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Responsive Design */
+@media (max-width: 480px) {
+    .weather-container {
+        padding: 25px;
+        margin: 10px;
+    }
+    
+    .weather-title {
+        font-size: 1.8rem;
+        margin-bottom: 25px;
+    }
+    
+    .weather-input, .weather-btn {
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+    
+    .weather-details {
+        padding: 20px;
+        margin-top: 25px;
+    }
+}
+
+/* Weather condition backgrounds */
+.sunny {
+    background: linear-gradient(135deg, #f7b733 0%, #fc4a1a 100%);
+}
+
+.cloudy {
+    background: linear-gradient(135deg, #bdc3c7 0%, #95a5a6 100%);
+}
+
+.rainy {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+}
+
+.snowy {
+    background: linear-gradient(135deg, #ecf0f1 0%, #bdc3c7 100%);
+}
